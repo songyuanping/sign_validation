@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2ad20165-e60f-4bff-98fc-bf55e073a623" name="syp-server">
+        <fileTransfer rootFolder="/opt" accessType="SFTP" host="120.236.247.203" port="32192" sshConfigId="59f6c7fa-2d49-405b-9f99-d6e14b4c59df" sshConfig="root@120.236.247.203:32192 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

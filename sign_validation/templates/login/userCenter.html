@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<body lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 上述meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'login/css/main.css' %}" />
+      <title>个人中心</title>
+</head>
+<header id="header" class="alt">
+    <div class="inner">
+        <h1>手写签名真伪鉴别</h1>
+        <h2>个人中心</h2>
+    </div>
+</header>
+<div class="tab-pane" style="">
+    <div class="container">
+        <form class="form-signin" method="post" action="/index/userCenter/">
+            {% csrf_token %}
+            <h2 class="form-signin-heading" align="center">用户信息修改</h2>
+            <div style="width: 50%; margin-left: 25%" align="center">
+            <label for="input_name" style="margin-left: -45%">姓名：</label>
+            <input type="text"  class="form-inline" name="name" placeholder="请输入姓名" required=""
+                   autofocus="" id="input_name" value={{ name }}>
+            <br>
+                 <label for="input_pwd"style="margin-left: -45%">密码：</label>
+            <input type="password" class="form-inline" name="password" placeholder="请输入密码"
+                   required="" id="input_pwd", value={{ password }} >
+            <br>
+                <label for="input_name"style="margin-left: -45%">邮箱：</label>
+            <input type="text"  class="form-inline" name="email" placeholder="请输入邮箱" required=""
+                   autofocus="" id="input_email" value="{{ email }}">
+
+            <br>
+                <button  id="btn"type="submit">修改</button>
+            </div>
+
+        </form>
+        <section id="cta" class="main special">
+        <h2>END</h2>
+        <ul class="actions">
+            <li><a href="/index/" class="button big">返回主页</a></li>
+        </ul>
+    </section>
+    <script src="{% static 'login/js/jquery.min.js' %}"></script>
+    <script src="{% static 'login/js/skel.min.js' %}"></script>
+    <script src="{% static 'login/js/util.js' %}"></script>
+    <script src="{% static 'login/js/main.js' %}"></script>
+
+    </div>
+
+</div>
+
+</body>
+
+{#<input id="btn" type="button" value="提交" />#}
+
+</html>

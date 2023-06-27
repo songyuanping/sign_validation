@@ -1,0 +1,68 @@
+<!--
+/*
+* identify_result html
+* this html is for show the identify result
+* created by Su Linyu && Song Yuanping
+* copyright USTC
+* 11.01.2021
+*/
+ -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>course</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'login/css/main.css' %}"/>
+</head>
+<body>
+<header id="header" class="alt">
+    <div class="inner">
+        <h1>识别结果</h1>
+    </div>
+</header>
+
+<table class="table">
+    <tbody>
+    <tr>
+        <td align="center">
+            <img src="{{ images.Image.url }}" alt="{{ images.Title }}" style="width: 300px;height: 200px;">
+
+        </td>
+        <td align="center">
+            这张为传入图片
+        </td>
+    </tr>
+{#    {% for key,value in result.items %}#}
+        <tr>
+            <td align="center">
+                <img src="{{ imageRef }}" style="width: 300px;height: 200px;">
+            </td>
+            <td align="center">
+                相似率为{{ score }}%
+            </td>
+
+        </tr>
+{#    {% endfor %}#}
+    </tbody>
+
+</table>
+<section id="cta" class="main special">
+    <h2>END</h2>
+    <ul class="actions">
+        <li><a href="/index/identify" class="button big">返回上一页</a></li>
+    </ul>
+</section>
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+<!--
+/*
+* identify html
+* this html is for identify signature is genius
+* created by Su Linyu && Song Yuanping
+* copyright USTC
+* 11.01.2021
+*/
+ -->
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 上述meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'login/css/login.css' %}" rel="stylesheet"/>
+    <link href="{% static 'login/css/main.css' %}" rel="stylesheet"/>
+    <title>手写签名真伪鉴别</title>
+</head>
+<body>
+<header id="header" class="alt">
+    <div class="inner">
+        <h1>手写签名真伪鉴别</h1>
+
+    </div>
+</header>
+
+<h2 align="center">在此处上传需要判断真伪的签名图片：</h2>
+<p align="center">注意：上传图片格式应为jpeg、png等</p>
+<form method="post" enctype="multipart/form-data" style=" ">
+    {% csrf_token %}
+{#    {{ form.as_p }}#}
+
+{#        {{ form.as_p }}#}
+{#        <p>#}
+{#           <div class="text"  style="width: 40%;#}
+{#           margin:5px 10px 20px 40%" >#}
+{#    待传入图片:#}
+{#       {{ form.Title }}#}
+{#   </div>#}
+{#   </p>#}
+            <p>
+           <div class="text" align="center">
+      待传入图片: {{ form.Image }}
+   </div>
+   </p>
+    <div align="center">
+    <button type="submit" class="btn btn-primary">上传图片</button>
+        </div>
+</form>
+<!-- CTA -->
+<section id="cta" class="main special">
+    <h2>E N D</h2>
+    <ul class="actions">
+        <li><a href="/index" class="button big">返回</a></li>
+        <li><a href="/index/identify_history" class="button big">历史记录</a></li>
+    </ul>
+</section>
+<footer id="footer">
+    <ul class="icons">
+        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+</footer>
+</div> <!-- /container -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+{#    以下三者的引用顺序是固定的#}
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.15.0/umd/popper.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="{% static 'login/js/jquery.min.js' %}"></script>
+<script src="{% static 'login/js/skel.min.js' %}"></script>
+<script src="{% static 'login/js/util.js' %}"></script>
+<script src="{% static 'login/js/main.js' %}"></script>
+
+</body>
+</html>

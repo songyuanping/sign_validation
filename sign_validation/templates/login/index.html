@@ -1,0 +1,100 @@
+<!--
+/*
+* index html
+* this html is index web
+* created by Su Linyu && Song Yuanping
+* copyright USTC
+* 11.01.2021
+*/
+ -->
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>手写签名真伪识别展示</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static 'login/css/main.css' %}"/>
+</head>
+<body>
+
+<!-- Header -->
+<header id="header" class="alt">
+    <div class="inner">
+        <h1>手写签名真伪识别展示</h1>
+    </div>
+</header>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Banner -->
+
+    <!-- Items -->
+    <section class="main">
+        <article class="item">
+            <header>
+                <a href="identify"><img src="{% static 'login/image/pic01.jpg' %}" alt=""/></a>
+                <h3>签名真伪鉴别</h3>
+            </header>
+            <p> 在这里，你可以输入签名图片，查看改签名是否为真签名</p>
+            <ul class="actions">
+                <li><a href="identify" class="button">Start</a></li>
+            </ul>
+        </article>
+        <article class="item">
+            <header>
+                <a href="judge"><img src="{% static 'login/image/pic02.jpg' %}" alt=""/></a>
+                <h3>签名识别</h3>
+            </header>
+            <p>在这里，你可以输入两张签名图片，判断其是否为同一人所写</p>
+            <ul class="actions">
+                <li><a href="judge" class="button">Start</a></li>
+            </ul>
+        </article>
+        <article class="item">
+            <header>
+                <a href="userCenter"><img src="{% static 'login/image/pic022.jpg' %}" alt="" /></a>
+                <h3>个人中心</h3>
+            </header>
+            <p>在这里，你可以查看并更改自己的信息</p>
+            <ul class="actions">
+                <li><a href="userCenter" class="button">Start</a></li>
+            </ul>
+        </article>
+
+
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="main special">
+        <h2>结语</h2>
+        <p>退出网站</p>
+        <ul class="actions">
+            <li><a href="logout" class="button big">退出</a></li>
+        </ul>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="{% static 'login/js/jquery.min.js' %}"></script>
+<script src="{% static 'login/js/skel.min.js' %}"></script>
+<script src="{% static 'login/js/util.js' %}"></script>
+<script src="{% static 'login/js/main.js' %}"></script>
+
+</body>
+</html>
